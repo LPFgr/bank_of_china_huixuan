@@ -1,0 +1,2160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外贸信托-稳鑫系列产品 - 北京银行</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1e3a5f;
+            --accent-gold: #c9a227;
+            --accent-green: #059669;
+            --accent-orange: #ea580c;
+            --bg-light: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-light: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header with Logo */
+        .header {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-light);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-blue), #2d5a8a);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-english {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+        }
+
+        .logo-chinese {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .header-tag {
+            background: linear-gradient(135deg, var(--accent-gold), #d4af37);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 14px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* 导出PDF按钮 */
+        .export-btn {
+            background: linear-gradient(135deg, var(--accent-gold), #d4af37);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(201, 162, 39, 0.3);
+        }
+
+        .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.4);
+        }
+
+        .export-btn:active {
+            transform: translateY(0);
+        }
+
+        .export-btn.exporting {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        /* 打印时隐藏导出按钮 */
+        @media print {
+            .pdf-export-bar {
+                display: none !important;
+            }
+            .export-btn {
+                display: none !important;
+            }
+            .header {
+                position: static;
+            }
+        }
+
+        /* PDF导出时隐藏按钮 */
+        .pdf-exporting .pdf-export-bar {
+            display: none !important;
+        }
+
+        /* Section通用样式 */
+        section {
+            padding: 24px 0;
+        }
+
+        .section-header {
+            margin-bottom: 18px;
+        }
+
+        .section-subtitle {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold) 60%, transparent);
+            border-radius: 2px;
+        }
+
+        /* 第一部分：产品核心信息 */
+        .product-info {
+            background: var(--bg-card);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .info-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 18px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .info-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .info-icon.blue { background: rgba(30, 58, 95, 0.1); color: var(--primary-blue); }
+        .info-icon.gold { background: rgba(201, 162, 39, 0.1); color: var(--accent-gold); }
+        .info-icon.green { background: rgba(5, 150, 105, 0.1); color: var(--accent-green); }
+
+        .info-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .info-content {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .info-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .risk-badge {
+            display: inline-block;
+            background: rgba(234, 88, 12, 0.1);
+            color: var(--accent-orange);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* 关键数据卡片 */
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .metric-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 20px 14px;
+            text-align: center;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .metric-card.highlight {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+        }
+
+        .metric-card.highlight .metric-label,
+        .metric-card.highlight .metric-sublabel {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .metric-icon {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .metric-value {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 4px;
+        }
+
+        .metric-card.highlight .metric-value {
+            color: var(--accent-gold);
+        }
+
+        .metric-sublabel {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        /* 费用结构 */
+        .fees-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .fee-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 18px;
+            border: 1px solid var(--border-light);
+        }
+
+        .fee-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .fee-card-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .fee-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .fee-row:last-child {
+            border-bottom: none;
+        }
+
+        .fee-name {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .fee-value {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .fee-value.green {
+            color: var(--accent-green);
+        }
+
+        .floating-fee {
+            text-align: center;
+            padding: 14px;
+        }
+
+        .floating-fee-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .floating-fee-value {
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 6px;
+        }
+
+        .floating-fee-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* 第二部分：业绩表现 */
+        .performance {
+            background: var(--bg-light);
+        }
+
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .performance-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid var(--border-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .performance-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .main-performance {
+            background: var(--primary-blue);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            border: none;
+        }
+
+        .main-performance::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(201, 162, 39, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .performance-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-bottom: 10px;
+        }
+
+        .performance-title {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            opacity: 0.9;
+        }
+
+        .performance-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .performance-unit {
+            font-size: 20px;
+            color: var(--accent-gold);
+        }
+
+        .performance-note {
+            font-size: 11px;
+            opacity: 0.7;
+            margin-top: 12px;
+        }
+
+        .performance-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .perf-stat {
+            text-align: center;
+        }
+
+        .perf-stat-label {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-bottom: 4px;
+        }
+
+        .perf-stat-value {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .honor-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+            border: 1px solid var(--border-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .honor-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(201, 162, 39, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .honor-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+        }
+
+        .honor-subtitle {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .honor-highlight {
+            font-size: 13px;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .overseas-card {
+            background: rgba(5, 150, 105, 0.05);
+            border: 1px solid rgba(5, 150, 105, 0.2);
+        }
+
+        .overseas-card .honor-icon {
+            background: rgba(5, 150, 105, 0.1);
+        }
+
+        .overseas-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+
+        /* 净值走势图 */
+        .chart-container {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--border-light);
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .chart-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .chart-legend {
+            display: flex;
+            gap: 16px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .legend-dot.blue { background: var(--primary-blue); }
+        .legend-dot.gold { background: var(--accent-gold); }
+
+        .chart-area {
+            height: 220px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .chart-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .chart-source {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        /* 第三部分：组合策略 */
+        .strategy {
+            background: var(--bg-card);
+        }
+
+        .strategy-header {
+            background: var(--primary-blue);
+            border-radius: 12px;
+            padding: 20px;
+            color: white;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .strategy-icon-main {
+            width: 48px;
+            height: 48px;
+            background: rgba(201, 162, 39, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .strategy-header-content h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .strategy-header-content p {
+            font-size: 13px;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        .strategy-header-content .highlight {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .strategy-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 16px;
+            border: 1px solid var(--border-light);
+            border-top: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .strategy-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .strategy-card:nth-child(2) { border-top-color: var(--accent-orange); }
+        .strategy-card:nth-child(3) { border-top-color: var(--accent-green); }
+        .strategy-card:nth-child(4) { border-top-color: var(--primary-blue); }
+
+        .strategy-card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .strategy-card:nth-child(1) .strategy-card-icon { background: rgba(201, 162, 39, 0.1); }
+        .strategy-card:nth-child(2) .strategy-card-icon { background: rgba(234, 88, 12, 0.1); }
+        .strategy-card:nth-child(3) .strategy-card-icon { background: rgba(5, 150, 105, 0.1); }
+        .strategy-card:nth-child(4) .strategy-card-icon { background: rgba(30, 58, 95, 0.1); }
+
+        .strategy-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .strategy-card ul {
+            list-style: none;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .strategy-card li {
+            padding: 4px 0;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .strategy-card li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--border-light);
+        }
+
+        .strategy-tag {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .strategy-card:nth-child(1) .strategy-tag { background: rgba(201, 162, 39, 0.1); color: var(--accent-gold); }
+        .strategy-card:nth-child(2) .strategy-tag { background: rgba(234, 88, 12, 0.1); color: var(--accent-orange); }
+        .strategy-card:nth-child(3) .strategy-tag { background: rgba(5, 150, 105, 0.1); color: var(--accent-green); }
+        .strategy-card:nth-child(4) .strategy-tag { background: rgba(30, 58, 95, 0.1); color: var(--primary-blue); }
+
+        .strategy-footer {
+            background: rgba(201, 162, 39, 0.05);
+            border-radius: 10px;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+        }
+
+        .strategy-footer-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .strategy-footer-icon {
+            font-size: 26px;
+        }
+
+        .strategy-footer-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 3px;
+        }
+
+        .strategy-footer-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .strategy-footer-right {
+            text-align: right;
+        }
+
+        .strategy-footer-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-bottom: 3px;
+        }
+
+        .strategy-footer-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        /* 第四部分：投研团队 */
+        .team {
+            background: var(--bg-light);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .team-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .team-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .team-position {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #dc2626;
+            text-transform: uppercase;
+        }
+
+        .team-edu {
+            font-size: 13px;
+            color: var(--accent-gold);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .team-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .team-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .team-tag {
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            border: 1px solid var(--border-light);
+            color: var(--text-secondary);
+        }
+
+        .team-tag.highlight {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+
+        /* 团队业绩数据展示样式 */
+        .team-stats {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 30px 0;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-stats-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .team-stats-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .team-stats-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .team-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .team-stat-card {
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-card) 100%);
+            border-radius: 12px;
+            padding: 24px 16px;
+            text-align: center;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .team-stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .team-stat-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .team-stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 6px;
+        }
+
+        .team-stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .team-stats-chart {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid var(--border-light);
+        }
+
+        .chart-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .chart-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .chart-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .chart-bar-label {
+            width: 80px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .chart-bar-track {
+            flex: 1;
+            height: 12px;
+            background: var(--border-light);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .chart-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--accent-gold) 100%);
+            border-radius: 6px;
+            transition: width 1s ease;
+        }
+
+        .chart-bar-value {
+            width: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            flex-shrink: 0;
+        }
+
+        /* 新增统计网格样式 */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-card) 100%);
+            border-radius: 12px;
+            padding: 24px 16px;
+            text-align: center;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-num {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .team-stats {
+                padding: 24px;
+            }
+
+            .team-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .team-stat-value {
+                font-size: 22px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .stat-num {
+                font-size: 22px;
+            }
+
+            .stat-label {
+                font-size: 12px;
+            }
+
+            .chart-bar-label {
+                width: 60px;
+                font-size: 12px;
+            }
+        }
+
+        /* 第五部分：产品亮点 */
+        .highlights {
+            background: var(--bg-card);
+        }
+
+        .highlights-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .highlight-item {
+            display: flex;
+            gap: 18px;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .highlight-item:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-item:nth-child(2) { border-left-color: var(--accent-green); }
+        .highlight-item:nth-child(3) { border-left-color: var(--primary-blue); }
+
+        .highlight-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: rgba(201, 162, 39, 0.2);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 60px;
+        }
+
+        .highlight-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 6px;
+        }
+
+        .highlight-content .subtitle {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .highlight-content ul {
+            list-style: none;
+        }
+
+        .highlight-content li {
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .highlight-content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 6px;
+            height: 2px;
+            background: var(--accent-gold);
+        }
+
+        .highlight-content li strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* 第六部分：公司背景与实力 */
+        .company-profile {
+            background: var(--bg-light);
+        }
+
+        .company-main-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .company-intro-card {
+            background: var(--primary-blue);
+            border-radius: 12px;
+            padding: 20px;
+            color: white;
+        }
+
+        .company-intro-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .company-logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--accent-gold), #d4af37);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .company-intro-title h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .company-intro-title span {
+            font-size: 12px;
+            opacity: 0.8;
+            color: var(--accent-gold);
+        }
+
+        .company-intro-desc {
+            font-size: 13px;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .company-intro-desc .highlight {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .company-honors {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .honor-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .honor-item-icon {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .honor-item-text {
+            font-size: 11px;
+            opacity: 0.9;
+        }
+
+        .shareholder-section {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 18px;
+            border: 1px solid var(--border-light);
+        }
+
+        .shareholder-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .main-shareholder {
+            background: rgba(30, 58, 95, 0.05);
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .main-shareholder-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .main-shareholder-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .main-shareholder-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--primary-blue);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .main-shareholder-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .main-shareholder-label {
+            font-size: 10px;
+            color: var(--text-secondary);
+        }
+
+        .shareholder-ratio {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .shareholder-ratio-label {
+            font-size: 10px;
+            color: var(--text-secondary);
+            text-align: right;
+        }
+
+        .main-shareholder-desc {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .main-shareholder-desc .highlight {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .other-shareholder {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 14px;
+            background: rgba(201, 162, 39, 0.05);
+            border-radius: 6px;
+        }
+
+        .other-shareholder-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .other-shareholder-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-secondary);
+        }
+
+        /* 业务资质 */
+        .qualifications-section {
+            margin-top: 20px;
+        }
+
+        .qualifications-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .qualifications-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .qualification-item {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 16px 12px;
+            text-align: center;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .qualification-item:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+
+        .qualification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin: 0 auto 10px;
+        }
+
+        .qualification-item:nth-child(1) .qualification-icon { background: rgba(30, 58, 95, 0.1); }
+        .qualification-item:nth-child(2) .qualification-icon { background: rgba(201, 162, 39, 0.1); }
+        .qualification-item:nth-child(3) .qualification-icon { background: rgba(5, 150, 105, 0.1); }
+        .qualification-item:nth-child(4) .qualification-icon { background: rgba(234, 88, 12, 0.1); }
+        .qualification-item:nth-child(5) .qualification-icon { background: rgba(30, 58, 95, 0.1); }
+        .qualification-item:nth-child(6) .qualification-icon { background: rgba(201, 162, 39, 0.1); }
+        .qualification-item:nth-child(7) .qualification-icon { background: rgba(5, 150, 105, 0.1); }
+        .qualification-item:nth-child(8) .qualification-icon { background: rgba(234, 88, 12, 0.1); }
+
+        .qualification-text {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* 风险提示部分 */
+        .risk-warning {
+            background: linear-gradient(135deg, #fef3c7, #fef9c3);
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        .risk-warning .section-title {
+            color: #92400e;
+        }
+
+        .risk-warning .section-title::after {
+            background: linear-gradient(90deg, #f59e0b, #f59e0b 60%, transparent);
+        }
+
+        .risk-content {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .risk-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .risk-text {
+            font-size: 13px;
+            line-height: 1.9;
+            color: #78350f;
+            text-align: justify;
+        }
+
+        .risk-text p {
+            margin-bottom: 12px;
+        }
+
+        .risk-highlight {
+            background: rgba(245, 158, 11, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .risk-divider {
+            height: 1px;
+            background: rgba(245, 158, 11, 0.3);
+            margin: 14px 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-blue);
+            color: white;
+            padding: 18px 0;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* 响应式 */
+        @media (max-width: 1024px) {
+            .info-grid,
+            .strategy-grid,
+            .qualifications-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .key-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .performance-grid,
+            .company-main-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .info-grid,
+            .strategy-grid,
+            .key-metrics,
+            .team-grid,
+            .fees-container,
+            .qualifications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .performance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .performance-stats,
+            .company-honors {
+                grid-template-columns: 1fr;
+            }
+
+            .strategy-header,
+            .strategy-footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 16px;
+            }
+
+            .highlight-item {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .main-shareholder-header {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导出PDF按钮 -->
+    <div class="pdf-export-bar" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <button class="export-btn" onclick="exportToPDF()" id="exportBtn">
+            <span>📄</span>
+            <span>导出PDF</span>
+        </button>
+    </div>
+
+    <!-- 第一部分：产品核心信息 -->
+    <section class="product-info">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Product Information</div>
+                <h2 class="section-title">产品核心信息</h2>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="info-icon gold">📋</div>
+                        <div class="info-card-title">产品名称</div>
+                    </div>
+                    <div class="info-content">
+                        <strong>外贸信托-睿泽稳鑫1号集合资金信托计划-第1期信托受益权</strong><br>
+                        <span style="color: var(--text-secondary);">(JA8781)</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="info-icon blue">🏢</div>
+                        <div class="info-card-title">管理人/代销/保管</div>
+                    </div>
+                    <div class="info-content">
+                        <strong>管理人：</strong>中国对外经济贸易信托有限公司<br>
+                        <strong>代销机构：</strong>北京银行股份有限公司<br>
+                        <strong>保管人：</strong>北京银行股份有限公司
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="info-icon green">🛡️</div>
+                        <div class="info-card-title">产品类型与风险</div>
+                    </div>
+                    <div class="info-content">
+                        资产管理信托 · 固定收益类<br>
+                        <span class="risk-badge">R3 中等风险</span><br>
+                        <span style="font-size: 12px; margin-top: 8px; display: block;">适合中等及以上风险承受能力投资者</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-metrics">
+                <div class="metric-card highlight">
+                    <div class="metric-icon">💰</div>
+                    <div class="metric-label">认购起点</div>
+                    <div class="metric-value">50<span class="metric-unit">万</span></div>
+                    <div class="metric-sublabel">以1万元整数倍增加</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">📅</div>
+                    <div class="metric-label">募集期</div>
+                    <div class="metric-value" style="color: var(--primary-blue); font-size: 28px;">2.4-2.9</div>
+                    <div class="metric-sublabel">2026年</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🚀</div>
+                    <div class="metric-label">成立日</div>
+                    <div class="metric-value" style="color: var(--accent-green); font-size: 28px;">2.11</div>
+                    <div class="metric-sublabel">2026年</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🔄</div>
+                    <div class="metric-label">赎回开放日</div>
+                    <div class="metric-value" style="color: var(--accent-orange); font-size: 28px;">8.11</div>
+                    <div class="metric-sublabel">2026年 · 默认赎回</div>
+                </div>
+            </div>
+
+            <div class="fees-container">
+                <div class="fee-card">
+                    <div class="fee-card-header">
+                        <span style="font-size: 18px;">📊</span>
+                        <span class="fee-card-title">固定费用</span>
+                    </div>
+                    <div class="fee-row">
+                        <span class="fee-name">认购/申购/赎回费</span>
+                        <span class="fee-value green">无</span>
+                    </div>
+                    <div class="fee-row">
+                        <span class="fee-name">固定信托报酬</span>
+                        <span class="fee-value">0.15%/年</span>
+                    </div>
+                    <div class="fee-row">
+                        <span class="fee-name">固定代销销售费</span>
+                        <span class="fee-value">0.30%/年</span>
+                    </div>
+                    <div class="fee-row">
+                        <span class="fee-name">保管费+登记服务费</span>
+                        <span class="fee-value">0.02%/年</span>
+                    </div>
+                </div>
+
+                <div class="fee-card">
+                    <div class="fee-card-header">
+                        <span style="font-size: 18px;">📈</span>
+                        <span class="fee-card-title">浮动管理费</span>
+                    </div>
+                    <div class="floating-fee">
+                        <div class="floating-fee-label">逐笔计提，浮动管理费计提基准</div>
+                        <div class="floating-fee-value">2.40%</div>
+                        <div class="floating-fee-desc">以上部分收取 <strong style="color: var(--primary-blue);">60%</strong>，在赎回/清算时提取</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二部分：业绩表现与荣誉 -->
+    <section class="performance">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Performance & Honors</div>
+                <h2 class="section-title">业绩表现与荣誉</h2>
+            </div>
+
+            <div class="performance-grid">
+                <div class="performance-card main-performance">
+                    <div class="performance-title">成立以来年化收益</div>
+                    <div class="performance-value">5.28<span class="performance-unit">%</span></div>
+                    <div class="performance-stats">
+                        <div class="perf-stat">
+                            <div class="perf-stat-label">单位净值</div>
+                            <div class="perf-stat-value" style="color: var(--accent-gold);">1.1782</div>
+                        </div>
+                        <div class="perf-stat">
+                            <div class="perf-stat-label">成立日期</div>
+                            <div class="perf-stat-value">2022.8.9</div>
+                        </div>
+                        <div class="perf-stat">
+                            <div class="perf-stat-label">运作天数</div>
+                            <div class="perf-stat-value">1,254天</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performance-card honor-card">
+                    <div class="honor-icon">🏆</div>
+                    <div class="honor-title">金牛奖</div>
+                    <div class="honor-subtitle">第三届 & 第四届<br>2023年 - 2024年</div>
+                    <div class="honor-highlight">连续2年获奖</div>
+                </div>
+
+                <div class="performance-card overseas-card">
+                    <div class="honor-icon">🌍</div>
+                    <div class="honor-title">海外债产品业绩</div>
+                    <div class="overseas-value">4.96%</div>
+                    <div class="honor-subtitle">稳鑫A期成立以来年化</div>
+                </div>
+            </div>
+            <div class="performance-note">数据截至2026年1月14日 · 代表产品"外贸信托-稳鑫集合资金信托计划"成立于2022年8月9日</div>
+
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3 class="chart-title">稳鑫系列产品净值走势</h3>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot blue"></div>
+                            <span>稳鑫集合</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot gold"></div>
+                            <span>稳鑫A期</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-area">
+                    <svg class="chart-svg" viewBox="0 0 800 250" preserveAspectRatio="none">
+                        <line x1="0" y1="200" x2="800" y2="200" stroke="#e5e7eb" stroke-width="1"/>
+                        <line x1="0" y1="150" x2="800" y2="150" stroke="#e5e7eb" stroke-width="1"/>
+                        <line x1="0" y1="100" x2="800" y2="100" stroke="#e5e7eb" stroke-width="1"/>
+                        <line x1="0" y1="50" x2="800" y2="50" stroke="#e5e7eb" stroke-width="1"/>
+                        <path d="M 0 200 Q 100 190 150 180 T 250 160 T 350 140 T 450 120 T 550 100 T 650 80 T 750 60 L 800 50" 
+                              fill="none" stroke="#1e3a5f" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 0 200 Q 100 195 150 185 T 250 170 T 350 155 T 450 140 T 550 125 T 650 110 T 750 95 L 800 85" 
+                              fill="none" stroke="#c9a227" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="150" cy="180" r="4" fill="#1e3a5f"/>
+                        <circle cx="250" cy="160" r="4" fill="#1e3a5f"/>
+                        <circle cx="350" cy="140" r="4" fill="#1e3a5f"/>
+                        <circle cx="150" cy="185" r="4" fill="#c9a227"/>
+                        <circle cx="250" cy="170" r="4" fill="#c9a227"/>
+                        <circle cx="350" cy="155" r="4" fill="#c9a227"/>
+                    </svg>
+                    <div style="position: absolute; left: 0; top: 0; height: 100%; display: flex; flex-direction: column; justify-content: space-between; font-size: 11px; color: #9ca3af;">
+                        <span>1.2</span>
+                        <span>1.15</span>
+                        <span>1.1</span>
+                        <span>1.05</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 11px; color: #9ca3af; margin-top: 8px; padding-left: 30px;">
+                    <span>2022-08</span>
+                    <span>2022-12</span>
+                    <span>2023-04</span>
+                    <span>2023-08</span>
+                    <span>2023-12</span>
+                    <span>2024-04</span>
+                    <span>2024-08</span>
+                    <span>2024-12</span>
+                    <span>2025-04</span>
+                    <span>2025-08</span>
+                    <span>2025-12</span>
+                    <span>2026-01</span>
+                </div>
+                <div class="chart-source">数据来源：外贸信托、万得 | 数据期间：2022年8月9日至2026年1月14日</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三部分：组合策略框架 -->
+    <section class="strategy">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Portfolio Strategy</div>
+                <h2 class="section-title">组合策略框架</h2>
+            </div>
+
+            <div class="strategy-header">
+                <div class="strategy-icon-main">🎯</div>
+                <div class="strategy-header-content">
+                    <h3>核心策略定位</h3>
+                    <p>产品主要配置信用债(80%-100%)，通过精选个券、集中度管理进行分散化投资，把控信用风险。以<span class="highlight">票息配置策略</span>为主，同时结合多策略稳步提升产品收益，维持产品流动性的同时放大组合收益。</p>
+                </div>
+            </div>
+
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-card-icon">📊</div>
+                    <h4>票息配置策略</h4>
+                    <ul>
+                        <li>精选优质城投债("真城投")</li>
+                        <li>国企央企产业债</li>
+                        <li>以AA+以上评级为主</li>
+                        <li>集中度管理分散投资</li>
+                    </ul>
+                    <span class="strategy-tag">核心策略</span>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-card-icon">🛡️</div>
+                    <h4>担保债增强策略</h4>
+                    <ul>
+                        <li>多维度筛选优质担保公司</li>
+                        <li>市场对担保债定价偏差</li>
+                        <li>极端情况下表现稳定</li>
+                        <li>风险承受能力评估</li>
+                    </ul>
+                    <span class="strategy-tag">严控风险</span>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-card-icon">⏱️</div>
+                    <h4>久期策略</h4>
+                    <ul>
+                        <li>基于宏观和货币政策判断</li>
+                        <li>收益率曲线形态分析</li>
+                        <li>市场利率走势预判</li>
+                        <li>确定最优组合久期</li>
+                    </ul>
+                    <span class="strategy-tag">久期收益</span>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-card-icon">⚡</div>
+                    <h4>交易策略</h4>
+                    <ul>
+                        <li>波段操作增厚收益</li>
+                        <li>择时能力提升回报</li>
+                        <li>利率震荡行情应对</li>
+                        <li>灵活调整仓位</li>
+                    </ul>
+                    <span class="strategy-tag">波段收益</span>
+                </div>
+            </div>
+
+            <div class="strategy-footer">
+                <div class="strategy-footer-left">
+                    <div class="strategy-footer-icon">💡</div>
+                    <div>
+                        <div class="strategy-footer-title">策略协同效应</div>
+                        <div class="strategy-footer-desc">四大策略相互配合，在严控风险的基础上增厚收益，实现风险调整后的最优回报</div>
+                    </div>
+                </div>
+                <div class="strategy-footer-right">
+                    <div class="strategy-footer-label">策略配置比例</div>
+                    <div class="strategy-footer-value">80-100%</div>
+                    <div style="font-size: 12px; color: var(--text-secondary);">信用债配置</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第四部分：投研团队介绍 -->
+    <section class="team">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">02 Investment Team</div>
+                <h2 class="section-title">投研团队介绍</h2>
+            </div>
+
+            <!-- 团队业绩数据展示 -->
+            <div class="team-stats">
+                <div class="team-stats-header">
+                    <h3 class="team-stats-title">投研团队核心数据</h3>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-num">400亿+</div>
+                        <div class="stat-label">稳鑫系列产品<br>管理规模</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">4年</div>
+                        <div class="stat-label">主动管理<br>投资经验</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">5家</div>
+                        <div class="stat-label">长期合作<br>渠道</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">200人</div>
+                        <div class="stat-label">证券运营<br>服务支持</div>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-header">
+                        <div class="team-name">徐聪</div>
+                        <div class="team-position">固定收益部负责人</div>
+                    </div>
+                    <div class="team-edu">对外经济贸易大学金融学硕士</div>
+                    <div class="team-desc">曾就职于渤海银行总行金融市场部、渤海证券债券销售交易总部、渤海汇金固定收益部，拥有银行间本币、外汇及上交所黄金交易员资格。</div>
+                    <div class="team-tags">
+                        <span class="team-tag">银行间本币</span>
+                        <span class="team-tag">外汇交易</span>
+                        <span class="team-tag highlight">宏观分析</span>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-card-header">
+                        <div class="team-name">朱玉润</div>
+                        <div class="team-position">投资经理</div>
+                    </div>
+                    <div class="team-edu">英国圣安德鲁斯大学金融学硕士</div>
+                    <div class="team-desc">负责产品投资运作及宏观利率模型搭建，具备全球化投资视野与量化分析能力。</div>
+                    <div class="team-tags">
+                        <span class="team-tag highlight">CFA</span>
+                        <span class="team-tag">利率模型</span>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-card-header">
+                        <div class="team-name">沈城</div>
+                        <div class="team-position">投资经理</div>
+                    </div>
+                    <div class="team-edu">清华大学金融硕士 | 11年从业经验</div>
+                    <div class="team-desc">曾就职于联合信用，负责产品投资运作管理工作，深耕信用研究领域。</div>
+                    <div class="team-tags">
+                        <span class="team-tag highlight">信用研究</span>
+                        <span class="team-tag">风险管理</span>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-card-header">
+                        <div class="team-name">李思</div>
+                        <div class="team-position">投资经理</div>
+                    </div>
+                    <div class="team-edu">波士顿大学银行与金融法硕士</div>
+                    <div class="team-desc">负责稳鑫字母系列（境外债）投资，具备中国与纽约州法律执业资格，擅长跨境资产配置。</div>
+                    <div class="team-tags">
+                        <span class="team-tag highlight">CFA</span>
+                        <span class="team-tag highlight">FRM</span>
+                        <span class="team-tag">境外债</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第五部分：产品亮点 -->
+    <section class="highlights">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Product Highlights</div>
+                <h2 class="section-title">产品亮点</h2>
+            </div>
+
+            <div class="highlights-list">
+                <div class="highlight-item">
+                    <div class="highlight-number">01</div>
+                    <div class="highlight-content">
+                        <h3>多元化投资策略</h3>
+                        <ul>
+                            <li><strong>投资标的多元化</strong>，精选信用债作为打底资产，波段交易利率债、地方债、二永债</li>
+                            <li>以<strong>票息策略为主</strong>+多种策略为辅，通过选择个券、集中度管理进行分散投资</li>
+                            <li>结合多策略稳步提升产品收益，维持产品流动性的同时放大组合收益</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-item">
+                    <div class="highlight-number">02</div>
+                    <div class="highlight-content">
+                        <h3>专注于信用债的深度挖掘</h3>
+                        <ul>
+                            <li>产品主要投资于<strong>城投债</strong>，通过深度挖掘城投债的投资机会，为投资者提供稳定的收益来源</li>
+                            <li>只选<strong>"真城投"</strong>，通过四维度认定（背景、业务、资产、债务）和四步法筛选（区域选择、信用挖掘、个券挖掘、担保增强）</li>
+                            <li>严控信用风险，构建高度分散、配置持续优化的投资组合</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-item">
+                    <div class="highlight-number">03</div>
+                    <div class="highlight-content">
+                        <h3>多元化的投资组合</h3>
+                        <ul>
+                            <li>除了城投债，产品还涉及<strong>利率债、二永债以及产业债券</strong>等多元化资产</li>
+                            <li>通过多元化的资产配置，在不同的市场环境下寻找适合的投资组合，提高收益多样性</li>
+                            <li>四大策略协同：<strong>票息配置+担保债增强+久期策略+交易策略</strong>，实现风险调整后的最优回报</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第六部分：公司背景与实力 -->
+    <section class="company-profile">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Company Profile</div>
+                <h2 class="section-title">公司背景与实力</h2>
+            </div>
+
+            <div class="company-main-grid">
+                <div class="company-intro-card">
+                    <div class="company-intro-header">
+                        <div class="company-logo-icon">信</div>
+                        <div class="company-intro-title">
+                            <h3>中国对外经济贸易信托有限公司</h3>
+                            <span>FOTIC · 成立于1987年</span>
+                        </div>
+                    </div>
+                    <div class="company-intro-desc">
+                        以实现<span class="highlight">"金融好社会"</span>为使命，秉承<span class="highlight">"因诺致远"</span>的服务理念，弘扬新时代中国中化"精气神"，坚持以客户为中心的产品力和组织力建设，践行<span class="highlight">"合规先行、稳中求进"</span>的风控文化。
+                    </div>
+                    <div class="company-honors">
+                        <div class="honor-item">
+                            <div class="honor-item-icon">🏅</div>
+                            <div class="honor-item-text">最佳信托公司</div>
+                        </div>
+                        <div class="honor-item">
+                            <div class="honor-item-icon">🏆</div>
+                            <div class="honor-item-text">最佳资产管理机构</div>
+                        </div>
+                        <div class="honor-item">
+                            <div class="honor-item-icon">⭐</div>
+                            <div class="honor-item-text">最佳财富管理信托公司</div>
+                        </div>
+                        <div class="honor-item">
+                            <div class="honor-item-icon">🌟</div>
+                            <div class="honor-item-text">银行间市场优秀发行人</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shareholder-section">
+                    <div class="shareholder-header">
+                        <span>👥</span>
+                        <span>股东背景</span>
+                    </div>
+                    <div class="main-shareholder">
+                        <div class="main-shareholder-header">
+                            <div class="main-shareholder-info">
+                                <div class="main-shareholder-icon">中</div>
+                                <div>
+                                    <div class="main-shareholder-name">中国中化集团</div>
+                                    <div class="main-shareholder-label">实际控制人</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="shareholder-ratio">97.26%</div>
+                                <div class="shareholder-ratio-label">股权占比</div>
+                            </div>
+                        </div>
+                        <div class="main-shareholder-desc">
+                            中国中化集团有限公司与中国化工集团有限公司联合重组而成，为<span class="highlight">国务院国资委监管的国有重要骨干企业</span>，员工22万人。业务范围覆盖生命科学、材料科学、基础化工、环境科学、橡胶轮胎、机械装备、城市运营、产业金融等八大领域。
+                        </div>
+                    </div>
+                    <div class="other-shareholder">
+                        <div class="other-shareholder-label">
+                            <span>👤</span>
+                            <span>其他股东</span>
+                        </div>
+                        <div class="other-shareholder-value">2.74%</div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- 第七部分：风险提示 -->
+    <section class="risk-warning">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Risk Warning</div>
+                <h2 class="section-title">风险提示</h2>
+            </div>
+
+            <div class="risk-content">
+
+                <div class="risk-text">
+                    <p style="text-align: left; font-weight: 600; font-size: 16px; margin-bottom: 16px;">
+                        信托产品非存款、产品有风险、投资须谨慎
+                    </p>                
+                    <p>
+                        本信托计划设置浮动管理费计提基准<span class="risk-highlight">并非受托人保证受益人取得相应数额的信托利益</span>，亦<span class="risk-highlight">不意味着受托人保证信托资金不受损失</span>。本信托计划<span class="risk-highlight">不承诺保本，也不承诺最低收益</span>，具有投资风险。受托人的过往业绩并不预示其未来表现，投资经理的过往业绩亦不代表其未来表现，受托人管理的其他信托计划的业绩并不构成本信托计划业绩表现的保证。
+                    </p>
+                    
+                    <div class="risk-divider"></div>
+                                     
+                    <p>
+                        本产品由外贸信托发行与管理，北京银行作为代销机构不承担产品的投资和兑付责任。受托人将恪尽职守地管理信托财产，履行诚实信用、谨慎勤勉的义务，但受托人在管理、运用或处分信托财产过程中，可能面临包括但不限于<span class="risk-highlight">市场风险、标的产品运营风险、标的产品传导性风险及特定投资风险、流动性风险、管理风险、受益人信托资金部分损失或全部损失的风险、操作与技术风险、关联交易及利益冲突风险、双重收费的风险、本信托计划提前终止或延期的风险、本信托计划部分或全部信托资金无法继续投资的风险、无平仓止损机制的风险、本信托计划不成立或不生效的风险、电子签名方式签署信托文件的风险、估值风险、政策风险以及其他风险</span>等。
+                    </p>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-text">
+                中国对外经济贸易信托有限公司 © 2026 版权所有 | 睿泽稳鑫系列产品
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function exportToPDF() {
+            const btn = document.getElementById('exportBtn');
+            const exportBar = document.querySelector('.pdf-export-bar');
+            btn.classList.add('exporting');
+            btn.innerHTML = '<span>⏳</span><span>导出中...</span>';
+
+            // 临时隐藏导出按钮
+            exportBar.style.display = 'none';
+
+            const element = document.body;
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: '外贸信托-稳鑫系列产品介绍.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false,
+                    letterRendering: true
+                },
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait'
+                },
+                pagebreak: {
+                    mode: ['css', 'legacy'],
+                    avoid: ['.info-card', '.metric-card', '.performance-card', '.strategy-card', '.team-card', '.highlight-item', '.qualification-item']
+                }
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.classList.remove('exporting');
+                btn.innerHTML = '<span>📄</span><span>导出PDF</span>';
+                exportBar.style.display = 'block';
+            }).catch((error) => {
+                console.error('PDF导出失败:', error);
+                alert('PDF导出失败，请重试');
+                btn.classList.remove('exporting');
+                btn.innerHTML = '<span>📄</span><span>导出PDF</span>';
+                exportBar.style.display = 'block';
+            });
+        }
+    </script>
+</body>
+</html>

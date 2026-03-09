@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年外贸信托-慧选FOF领先系列各期开放日安排</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 10px;
+        }
+        
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            background: #f8fafc;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: flex;
+            gap: 0;
+        }
+        
+        .schedule-section {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        /* Code Index Wrapper - 顶部横向布局 */
+        .code-index-wrapper {
+            background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
+            padding: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .code-index-section {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        
+        /* Section Title */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .section-title .icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: white;
+        }
+        
+        .section-title h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        /* Schedule Cards */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .schedule-card {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .schedule-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .schedule-card.highlighted {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .card-badge {
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .badge-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .badge-purple { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+        .badge-green { background: linear-gradient(135deg, #10b981, #059669); }
+        .badge-orange { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .badge-pink { background: linear-gradient(135deg, #ec4899, #db2777); }
+        .badge-red { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        
+        .month-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 6px;
+        }
+        
+        .month-item {
+            text-align: center;
+            padding: 8px 4px;
+            background: #f8fafc;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .month-item:hover {
+            background: #e0f2fe;
+        }
+        
+        .month-name {
+            font-size: 0.7rem;
+            color: #6b7280;
+            margin-bottom: 2px;
+        }
+        
+        .month-date {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .date-circle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .circle-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .circle-purple { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+        .circle-green { background: linear-gradient(135deg, #10b981, #059669); }
+        .circle-orange { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        
+        .codes-list {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #e5e7eb;
+            font-size: 0.7rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        /* Special Card for 50期 */
+        .special-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 2px solid #fcd34d;
+        }
+        
+        .special-card .card-badge {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+        
+        .special-info {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 12px;
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            font-size: 0.8rem;
+        }
+        
+        .info-label {
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        .info-value {
+            color: #1e293b;
+            font-weight: 600;
+        }
+        
+        /* 50期表格样式 */
+        .fifty-table-container {
+            overflow-x: auto;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fifty-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.75rem;
+            min-width: 400px;
+        }
+        
+        .fifty-table th {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            padding: 10px 6px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid #f59e0b;
+        }
+        
+        .fifty-table th.month-col {
+            background: linear-gradient(135deg, #d97706, #b45309);
+            min-width: 50px;
+        }
+        
+        .fifty-table td {
+            padding: 10px 6px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            font-weight: 500;
+        }
+        
+        .fifty-table .month-cell {
+            background: #fef3c7;
+            font-weight: 600;
+            color: #92400e;
+        }
+        
+        .fifty-table .subscribe-only {
+            background: #eff6ff;
+            color: #1e40af;
+        }
+        
+        .fifty-table .subscribe-redeem {
+            background: linear-gradient(135deg, #fecaca, #fca5a5);
+            color: #991b1b;
+            font-weight: 600;
+        }
+        
+        .fifty-table .empty-cell {
+            background: #f9fafb;
+            color: #d1d5db;
+        }
+        
+        .fifty-table tbody tr:hover td:not(.month-cell) {
+            background: #fef9c3;
+        }
+        
+        /* 图例样式 */
+        .legend {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+        }
+        
+        .legend-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .subscribe-only-dot {
+            background: #eff6ff;
+        }
+        
+        .subscribe-redeem-dot {
+            background: linear-gradient(135deg, #fecaca, #fca5a5);
+        }
+        
+        .legend-text {
+            color: #4b5563;
+            font-weight: 500;
+        }
+        
+        /* Rules Section */
+        .rules-section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        
+        .rule-item {
+            display: flex;
+            gap: 12px;
+            padding: 14px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 3px solid;
+        }
+        
+        .rule-item:nth-child(1) { border-left-color: #3b82f6; }
+        .rule-item:nth-child(2) { border-left-color: #8b5cf6; }
+        .rule-item:nth-child(3) { border-left-color: #10b981; }
+        .rule-item:nth-child(4) { border-left-color: #f59e0b; }
+        .rule-item:nth-child(5) { border-left-color: #ec4899; }
+        
+        .rule-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .rule-item:nth-child(1) .rule-icon { background: #dbeafe; }
+        .rule-item:nth-child(2) .rule-icon { background: #ede9fe; }
+        .rule-item:nth-child(3) .rule-icon { background: #d1fae5; }
+        .rule-item:nth-child(4) .rule-icon { background: #fef3c7; }
+        .rule-item:nth-child(5) .rule-icon { background: #fce7f3; }
+        
+        .rule-content h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+        
+        .rule-content p {
+            font-size: 0.75rem;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+        
+        .rule-content ul {
+            margin-left: 12px;
+            margin-top: 6px;
+        }
+        
+        .rule-content li {
+            font-size: 0.7rem;
+            color: #6b7280;
+            margin-bottom: 3px;
+        }
+        
+        /* Code Index */
+        .code-index-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .code-index-title .icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        .code-index-title h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .code-search {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            margin-bottom: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .code-search:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+        }
+        
+        .code-list {
+            max-height: 300px;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 8px;
+            margin-top: 12px;
+        }
+        
+        .code-list::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        .code-list::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 2px;
+        }
+        
+        .code-list::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 2px;
+        }
+        
+        .code-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+        
+        .code-item:hover {
+            background: #e0f2fe;
+            border-color: #3b82f6;
+            transform: translateX(2px);
+        }
+        
+        .code-item.active {
+            background: #dbeafe;
+            border-color: #3b82f6;
+        }
+        
+        .code-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        
+        .dot-blue { background: #3b82f6; }
+        .dot-purple { background: #8b5cf6; }
+        .dot-green { background: #10b981; }
+        .dot-orange { background: #f59e0b; }
+        .dot-red { background: #ef4444; }
+        
+        .code-text {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .code-period {
+            margin-left: auto;
+            font-size: 0.65rem;
+            color: #6b7280;
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 8px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1e293b;
+            color: #94a3b8;
+            padding: 16px 20px;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .code-index-wrapper {
+                padding: 16px;
+            }
+            
+            .code-list {
+                max-height: 250px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .month-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .week-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            
+            .container {
+                border-radius: 0;
+            }
+            
+            .header {
+                padding: 16px 12px;
+            }
+            
+            .header h1 {
+                font-size: 1rem;
+            }
+            
+            .header .subtitle {
+                font-size: 0.75rem;
+            }
+            
+            .schedule-section {
+                padding: 12px;
+            }
+            
+            .section-title h2 {
+                font-size: 0.95rem;
+            }
+            
+            .schedule-card {
+                padding: 10px;
+                overflow: hidden;
+            }
+            
+            .card-badge {
+                font-size: 0.75rem;
+                padding: 4px 10px;
+            }
+            
+            /* 月份网格改为横向滚动 */
+            .month-grid {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                gap: 8px;
+                padding-bottom: 8px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
+                white-space: nowrap;
+            }
+            
+            .month-grid::-webkit-scrollbar {
+                height: 4px;
+            }
+            
+            .month-grid::-webkit-scrollbar-track {
+                background: #f1f5f9;
+                border-radius: 2px;
+            }
+            
+            .month-grid::-webkit-scrollbar-thumb {
+                background: #cbd5e1;
+                border-radius: 2px;
+            }
+            
+            .month-item {
+                flex: 0 0 auto;
+                min-width: 60px;
+                width: 60px;
+                padding: 8px 6px;
+                white-space: nowrap;
+            }
+            
+            .month-name {
+                font-size: 0.7rem;
+            }
+            
+            .month-date {
+                font-size: 0.8rem;
+            }
+            
+            .date-circle {
+                width: 24px;
+                height: 24px;
+                font-size: 0.7rem;
+            }
+            
+            .codes-list {
+                font-size: 0.65rem;
+            }
+            
+            .special-info {
+                flex-direction: column;
+                gap: 6px;
+                font-size: 0.75rem;
+            }
+            
+            .fifty-table {
+                font-size: 0.65rem;
+            }
+            
+            .fifty-table th,
+            .fifty-table td {
+                padding: 5px 3px;
+            }
+            
+            .legend {
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+            
+            .legend-item {
+                font-size: 0.7rem;
+            }
+            
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .rule-item {
+                padding: 10px;
+            }
+            
+            .rule-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 1rem;
+            }
+            
+            .rule-content h3 {
+                font-size: 0.8rem;
+            }
+            
+            .rule-content p,
+            .rule-content li {
+                font-size: 0.7rem;
+            }
+            
+            .code-list {
+                grid-template-columns: repeat(2, 1fr);
+                max-height: 200px;
+            }
+            
+            .code-item {
+                padding: 6px 8px;
+            }
+            
+            .code-text {
+                font-size: 0.75rem;
+            }
+            
+            .code-period {
+                font-size: 0.6rem;
+            }
+            
+            .footer {
+                padding: 12px 16px;
+                font-size: 0.7rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .code-list {
+                grid-template-columns: 1fr;
+                max-height: 250px;
+            }
+            
+            .fifty-table-container {
+                overflow-x: scroll;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .code-index-wrapper {
+                padding: 10px;
+            }
+            
+            .card-badge {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+            }
+            
+            .month-item {
+                min-width: 55px;
+                padding: 6px 4px;
+            }
+            
+            .date-circle {
+                width: 22px;
+                height: 22px;
+                font-size: 0.65rem;
+            }
+            
+            .section-title {
+                margin-bottom: 12px;
+                padding-bottom: 8px;
+            }
+            
+            .section-title .icon {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+            }
+            
+            .section-title h2 {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>2026年外贸信托-慧选FOF领先系列</h1>
+            <p class="subtitle">各期开放日安排 | 专业资产配置方案</p>
+        </header>
+        
+        <!-- TA代码索引区域 -->
+        <div class="code-index-wrapper">
+            <div class="code-index-section">
+                <div class="code-index-title">
+                    <div class="icon">🔍</div>
+                    <h3>TA代码索引</h3>
+                </div>
+                
+                <input type="text" class="code-search" placeholder="输入代码或期数搜索..." id="codeSearch">
+                
+                <div class="code-list" id="codeList" style="display: none;">
+                    <div class="code-item" data-group="group1" data-code="ZY0002">
+                        <div class="code-dot dot-blue"></div>
+                        <span class="code-text">ZY0002</span>
+                        <span class="code-period">1期</span>
+                    </div>
+                    <div class="code-item" data-group="group1" data-code="ZH00GD">
+                        <div class="code-dot dot-blue"></div>
+                        <span class="code-text">ZH00GD</span>
+                        <span class="code-period">1期</span>
+                    </div>
+                    <div class="code-item" data-group="group1" data-code="ZH00GU">
+                        <div class="code-dot dot-blue"></div>
+                        <span class="code-text">ZH00GU</span>
+                        <span class="code-period">2期</span>
+                    </div>
+                    <div class="code-item" data-group="group1" data-code="ZH00GV">
+                        <div class="code-dot dot-blue"></div>
+                        <span class="code-text">ZH00GV</span>
+                        <span class="code-period">3期</span>
+                    </div>
+                    <div class="code-item" data-group="group1" data-code="ZH00GW">
+                        <div class="code-dot dot-blue"></div>
+                        <span class="code-text">ZH00GW</span>
+                        <span class="code-period">4期</span>
+                    </div>
+                    <div class="code-item" data-group="group1" data-code="ZH00GX">
+                        <div class="code-dot dot-blue"></div>
+                        <span class="code-text">ZH00GX</span>
+                        <span class="code-period">5期</span>
+                    </div>
+                    <div class="code-item" data-group="group4" data-code="ZH00HV">
+                        <div class="code-dot dot-orange"></div>
+                        <span class="code-text">ZH00HV</span>
+                        <span class="code-period">6期</span>
+                    </div>
+                    <div class="code-item" data-group="group4" data-code="ZH00HW">
+                        <div class="code-dot dot-orange"></div>
+                        <span class="code-text">ZH00HW</span>
+                        <span class="code-period">7期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH00HX">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH00HX</span>
+                        <span class="code-period">8期</span>
+                    </div>
+                    <div class="code-item" data-group="group3" data-code="ZH00HY">
+                        <div class="code-dot dot-green"></div>
+                        <span class="code-text">ZH00HY</span>
+                        <span class="code-period">9期</span>
+                    </div>
+                    <div class="code-item" data-group="group3" data-code="ZH00IM">
+                        <div class="code-dot dot-green"></div>
+                        <span class="code-text">ZH00IM</span>
+                        <span class="code-period">11期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH00IN">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH00IN</span>
+                        <span class="code-period">12期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH000U">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH000U</span>
+                        <span class="code-period">21期</span>
+                    </div>
+                    <div class="code-item" data-group="group3" data-code="ZH00U1">
+                        <div class="code-dot dot-green"></div>
+                        <span class="code-text">ZH00U1</span>
+                        <span class="code-period">22期</span>
+                    </div>
+                    <div class="code-item" data-group="group3" data-code="ZH00UV">
+                        <div class="code-dot dot-green"></div>
+                        <span class="code-text">ZH00UV</span>
+                        <span class="code-period">23期</span>
+                    </div>
+                    <div class="code-item" data-group="group4" data-code="ZH00UW">
+                        <div class="code-dot dot-orange"></div>
+                        <span class="code-text">ZH00UW</span>
+                        <span class="code-period">24期</span>
+                    </div>
+                    <div class="code-item" data-group="group4" data-code="ZH00U6">
+                        <div class="code-dot dot-orange"></div>
+                        <span class="code-text">ZH00U6</span>
+                        <span class="code-period">25期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH00W2">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH00W2</span>
+                        <span class="code-period">26期</span>
+                    </div>
+                    <div class="code-item" data-group="group3" data-code="ZH00Y5">
+                        <div class="code-dot dot-green"></div>
+                        <span class="code-text">ZH00Y5</span>
+                        <span class="code-period">27期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH00YT">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH00YT</span>
+                        <span class="code-period">28期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH00YU">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH00YU</span>
+                        <span class="code-period">29期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH0105">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH0105</span>
+                        <span class="code-period">30期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH010H">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH010H</span>
+                        <span class="code-period">31期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH010G">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH010G</span>
+                        <span class="code-period">31期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH012A">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH012A</span>
+                        <span class="code-period">32期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH0158">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH0158</span>
+                        <span class="code-period">33期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH018M">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH018M</span>
+                        <span class="code-period">34期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH019U">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH019U</span>
+                        <span class="code-period">35期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH019Z">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH019Z</span>
+                        <span class="code-period">36期</span>
+                    </div>
+                    <div class="code-item" data-group="group3" data-code="ZH00RX">
+                        <div class="code-dot dot-green"></div>
+                        <span class="code-text">ZH00RX</span>
+                        <span class="code-period">37期</span>
+                    </div>
+                    <div class="code-item" data-group="group4" data-code="ZH00RV">
+                        <div class="code-dot dot-orange"></div>
+                        <span class="code-text">ZH00RV</span>
+                        <span class="code-period">38期</span>
+                    </div>
+                    <div class="code-item" data-group="group4" data-code="ZH00RW">
+                        <div class="code-dot dot-orange"></div>
+                        <span class="code-text">ZH00RW</span>
+                        <span class="code-period">39期</span>
+                    </div>
+                    <div class="code-item" data-group="group4" data-code="ZH00RY">
+                        <div class="code-dot dot-orange"></div>
+                        <span class="code-text">ZH00RY</span>
+                        <span class="code-period">40期</span>
+                    </div>
+                    <div class="code-item" data-group="group4" data-code="ZH00RZ">
+                        <div class="code-dot dot-orange"></div>
+                        <span class="code-text">ZH00RZ</span>
+                        <span class="code-period">41期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH01BQ">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH01BQ</span>
+                        <span class="code-period">41期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH01BR">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH01BR</span>
+                        <span class="code-period">42期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH01BS">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH01BS</span>
+                        <span class="code-period">43期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH01BT">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH01BT</span>
+                        <span class="code-period">44期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH01BU">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH01BU</span>
+                        <span class="code-period">45期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH01EV">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH01EV</span>
+                        <span class="code-period">46期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH0211">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH0211</span>
+                        <span class="code-period">47期</span>
+                    </div>
+                    <div class="code-item" data-group="group5" data-code="ZH0425">
+                        <div class="code-dot dot-orange"></div>
+                        <span class="code-text">ZH0425</span>
+                        <span class="code-period">50期</span>
+                    </div>
+                    <div class="code-item" data-group="group1" data-code="ZH00R4">
+                        <div class="code-dot dot-blue"></div>
+                        <span class="code-text">ZH00R4</span>
+                        <span class="code-period">88期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH01YK">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH01YK</span>
+                        <span class="code-period">66期</span>
+                    </div>
+                    <div class="code-item" data-group="group2" data-code="ZH01MN">
+                        <div class="code-dot dot-purple"></div>
+                        <span class="code-text">ZH01MN</span>
+                        <span class="code-period">99期</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="schedule-section">
+                <!-- Schedule Cards -->
+                <div class="section-title">
+                    <div class="icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">📅</div>
+                    <h2>开放日安排</h2>
+                </div>
+                
+                <div class="schedule-grid">
+                    <!-- Group 1: 1-5期/88期 -->
+                    <div class="schedule-card" id="group1">
+                        <div class="card-header">
+                            <span class="card-badge badge-blue">1-5期 / 88期</span>
+                        </div>
+                        <div class="month-grid">
+                            <div class="month-item">
+                                <div class="date-circle circle-blue">1月</div>
+                                <div class="month-date">5日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-blue">2月</div>
+                                <div class="month-date">3日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-blue">3月</div>
+                                <div class="month-date">3日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-blue">4月</div>
+                                <div class="month-date">3日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-blue">5月</div>
+                                <div class="month-date">6日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-blue">6月</div>
+                                <div class="month-date">3日</div>
+                            </div>
+                        </div>
+                        <div class="codes-list">
+                            ZY0002 · ZH00GD · ZH00GU · ZH00GV · ZH00GW · ZH00GX · ZH00R4
+                        </div>
+                    </div>
+                    
+                    <!-- Group 2: 8期/12-13期/21期/26期/28-47期/66期/99期 -->
+                    <div class="schedule-card" id="group2">
+                        <div class="card-header">
+                            <span class="card-badge badge-purple">8期 / 12-13期 / 21期 / 26期 / 28-47期 / 66期 / 99期</span>
+                        </div>
+                        <div class="month-grid">
+                            <div class="month-item">
+                                <div class="date-circle circle-purple">1月</div>
+                                <div class="month-date">12日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-purple">2月</div>
+                                <div class="month-date">10日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-purple">3月</div>
+                                <div class="month-date">10日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-purple">4月</div>
+                                <div class="month-date">10日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-purple">5月</div>
+                                <div class="month-date">11日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-purple">6月</div>
+                                <div class="month-date">10日</div>
+                            </div>
+                        </div>
+                        <div class="codes-list">
+                            ZH00HX · ZH00IN · ZH000U · ZH00W2 · ZH00YT · ZH00YU · ZH0105 · ZH010H · ZH010G · ZH012A · ZH0158 · ZH018M · ZH019U · ZH019Z · ZH01A3 · ZH01AZ · ZH01B7 · ZH01B8 · ZH01BQ · ZH01BR · ZH01BS · ZH01BT · ZH01BU · ZH01EV · ZH0211 · ZH01YK · ZH01MN
+                        </div>
+                    </div>
+                    
+                    <!-- Group 3: 9期/11期/18期/22-23期/27期 -->
+                    <div class="schedule-card" id="group3">
+                        <div class="card-header">
+                            <span class="card-badge badge-green">9期 / 11期 / 18期 / 22-23期 / 27期</span>
+                        </div>
+                        <div class="month-grid">
+                            <div class="month-item">
+                                <div class="date-circle circle-green">1月</div>
+                                <div class="month-date">19日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-green">2月</div>
+                                <div class="month-date">24日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-green">3月</div>
+                                <div class="month-date">18日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-green">4月</div>
+                                <div class="month-date">20日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-green">5月</div>
+                                <div class="month-date">18日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-green">6月</div>
+                                <div class="month-date">18日</div>
+                            </div>
+                        </div>
+                        <div class="codes-list">
+                            ZH00HY · ZH00IM · ZH00RX · ZH00U1 · ZH00UV · ZH00Y5
+                        </div>
+                    </div>
+                    
+                    <!-- Group 4: 6-7期/16-17期/19-20期/24-25期 -->
+                    <div class="schedule-card" id="group4">
+                        <div class="card-header">
+                            <span class="card-badge badge-orange">6-7期 / 16-17期 / 19-20期 / 24-25期</span>
+                        </div>
+                        <div class="month-grid">
+                            <div class="month-item">
+                                <div class="date-circle circle-orange">1月</div>
+                                <div class="month-date">26日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-orange">2月</div>
+                                <div class="month-date">26日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-orange">3月</div>
+                                <div class="month-date">26日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-orange">4月</div>
+                                <div class="month-date">27日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-orange">5月</div>
+                                <div class="month-date">26日</div>
+                            </div>
+                            <div class="month-item">
+                                <div class="date-circle circle-orange">6月</div>
+                                <div class="month-date">26日</div>
+                            </div>
+                        </div>
+                        <div class="codes-list">
+                            ZH00HV · ZH00HW · ZH00RV · ZH00RW · ZH00RY · ZH00RZ · ZH00UW · ZH00U6
+                        </div>
+                    </div>
+                    
+                    <!-- Special Group 5: 50期 周度开放 -->
+                    <div class="schedule-card special-card" id="group5">
+                        <div class="card-header">
+                            <span class="card-badge badge-red">50期 (ZH0425) - 周度开放</span>
+                        </div>
+                        <div class="special-info">
+                            <div class="info-item">
+                                <span class="info-label">预约申购：</span>
+                                <span class="info-value">T-1 至 T</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">预约赎回：</span>
+                                <span class="info-value">T-10 至 T</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 50期开放日表格 -->
+                        <div class="fifty-table-container">
+                            <table class="fifty-table">
+                                <thead>
+                                    <tr>
+                                        <th class="month-col">月份</th>
+                                        <th>第一周</th>
+                                        <th>第二周</th>
+                                        <th>第三周</th>
+                                        <th>第四周</th>
+                                        <th>第五周</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="month-cell">1月</td>
+                                        <td class="subscribe-only">9日</td>
+                                        <td class="subscribe-redeem">16日</td>
+                                        <td class="subscribe-only">23日</td>
+                                        <td class="subscribe-only">30日</td>
+                                        <td class="empty-cell">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="month-cell">2月</td>
+                                        <td class="subscribe-only">6日</td>
+                                        <td class="subscribe-redeem">13日</td>
+                                        <td class="empty-cell">-</td>
+                                        <td class="subscribe-only">27日</td>
+                                        <td class="empty-cell">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="month-cell">3月</td>
+                                        <td class="subscribe-only">6日</td>
+                                        <td class="subscribe-only">13日</td>
+                                        <td class="subscribe-redeem">20日</td>
+                                        <td class="subscribe-only">27日</td>
+                                        <td class="empty-cell">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="month-cell">4月</td>
+                                        <td class="subscribe-only">3日</td>
+                                        <td class="subscribe-only">10日</td>
+                                        <td class="subscribe-redeem">17日</td>
+                                        <td class="subscribe-only">24日</td>
+                                        <td class="subscribe-only">30日</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="month-cell">5月</td>
+                                        <td class="subscribe-only">8日</td>
+                                        <td class="subscribe-redeem">15日</td>
+                                        <td class="subscribe-only">22日</td>
+                                        <td class="subscribe-only">29日</td>
+                                        <td class="empty-cell">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="month-cell">6月</td>
+                                        <td class="subscribe-only">5日</td>
+                                        <td class="subscribe-only">12日</td>
+                                        <td class="subscribe-redeem">18日</td>
+                                        <td class="empty-cell">-</td>
+                                        <td class="subscribe-only">26日</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="legend">
+                            <div class="legend-item">
+                                <span class="legend-dot subscribe-only-dot"></span>
+                                <span class="legend-text">仅申购</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot subscribe-redeem-dot"></span>
+                                <span class="legend-text">可申购赎回</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rules Section -->
+                <div class="rules-section">
+                    <div class="section-title">
+                        <div class="icon" style="background: linear-gradient(135deg, #10b981, #059669);">📋</div>
+                        <h2>开放日规则说明</h2>
+                    </div>
+                    
+                    <div class="rules-grid">
+                        <div class="rule-item">
+                            <div class="rule-icon">⏰</div>
+                            <div class="rule-content">
+                                <h3>申请提交期间</h3>
+                                <p>开放日前10个工作日内可提交申购、赎回申请；开放日当日需在下午15:00前提交。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-icon">💰</div>
+                            <div class="rule-content">
+                                <h3>赎回资金支付</h3>
+                                <p>开放日后10个工作日内进行赎回资金支付（一般开放日后7个工作日内可支付）。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-icon">🔄</div>
+                            <div class="rule-content">
+                                <h3>申购与赎回原则</h3>
+                                <ul>
+                                    <li>申购、赎回价格以开放日当日的信托单位净值为基准进行计算</li>
+                                    <li>申购资金、赎回份额于开放日的下一工作日计入信托财产</li>
+                                    <li>受益人所持有信托单位份数不得低于40万份</li>
+                                    <li>受益人单次赎回信托单位份数不得少于1份或不为1份的整数倍</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-icon">💳</div>
+                            <div class="rule-content">
+                                <h3>申购费</h3>
+                                <ul>
+                                    <li>1-10期、16-30期、50期：认购/申购费为0.5%</li>
+                                    <li>11-15期：无认购/申购费</li>
+                                    <li>31期至47期：100万元（不含）以下费率1%，100万元（含）以上费率0.5%</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item" style="grid-column: 1 / -1;">
+                            <div class="rule-icon">🔒</div>
+                            <div class="rule-content">
+                                <h3>锁定期（16期及以后产品适用）</h3>
+                                <ul>
+                                    <li><strong>赎回锁定期：</strong>每笔份额认购当日（含）/开放日申购当日（含）起满6个月的开放日当日（不含），锁定期内不可赎回</li>
+                                    <li><strong>准赎回锁定期：</strong>每笔份额认购当日（含）/开放日申购当日（含）起满6个月的开放日当日（含）至该笔份额认购当日（含）/开放日申购当日（含）起满12个月的开放日当日（不含）；期间如赎回需缴纳赎回费，赎回费=赎回份额×开放日信托单位净值×2%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>声明：上述说明为对开放日规则的简要说明，具体条款请参阅信托合同 | 外贸信托-慧选FOF领先系列</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Code index interaction
+        const codeItems = document.querySelectorAll('.code-item');
+        const scheduleCards = document.querySelectorAll('.schedule-card');
+        const searchInput = document.getElementById('codeSearch');
+        
+        // Click on code item to highlight corresponding group
+        codeItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const groupId = this.dataset.group;
+                
+                // Remove active class from all items
+                codeItems.forEach(i => i.classList.remove('active'));
+                scheduleCards.forEach(card => card.classList.remove('highlighted'));
+                
+                // Add active class to clicked item
+                this.classList.add('active');
+                
+                // Highlight corresponding card
+                const targetCard = document.getElementById(groupId);
+                if (targetCard) {
+                    targetCard.classList.add('highlighted');
+                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        });
+        
+        // Search functionality
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            const codeList = document.getElementById('codeList');
+            
+            // Show/hide code list based on search term
+            if (searchTerm.length > 0) {
+                codeList.style.display = 'block';
+            } else {
+                codeList.style.display = 'none';
+                return;
+            }
+            
+            codeItems.forEach(item => {
+                const code = item.dataset.code.toLowerCase();
+                const period = item.querySelector('.code-period').textContent.toLowerCase();
+                
+                if (code.includes(searchTerm) || period.includes(searchTerm)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+        
+        // Remove highlight when clicking elsewhere
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.code-item') && !e.target.closest('.schedule-card')) {
+                codeItems.forEach(i => i.classList.remove('active'));
+                scheduleCards.forEach(card => card.classList.remove('highlighted'));
+            }
+        });
+    </script>
+</body>
+</html>
